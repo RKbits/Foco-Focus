@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foco</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="luz">
+        <div class="cable"></div>
+        <div class="foco">
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <div class="switch">
+        <div class="boton">
+            <div class="sign"></div>
+        </div>
+    </div>
+
+    <!-- sonido click -->
+    <audio src="/sound.mp3" id="audio" autostar='false'></audio>
+    <script>
+        let boton=document.querySelector('.boton');
+        let body=document.querySelector('body');
+        let audio=document.querySelector('#audio')
+        boton.onclick= function(){
+            body.classList.toggle('on')
+            audio.play();
+        }
+    </script>
+    
+</body>
+</html>
